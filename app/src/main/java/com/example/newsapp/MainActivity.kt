@@ -13,11 +13,33 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val songs = listOf("Hello","abcds","sfdfcd","fcdfsdvsdv","Hello2","abcds","Hello",
-            "abcds","sfdfcd","fcdfsdvsdv","Hello2","abcds","Hello","abcds","sfdfcd","fcdfsdvsdv","Hello2","abcds")
+        /*val songs = listOf("Hello","abcds","sfdfcd","fcdfsdvsdv","Hello2","abcds","Hello",
+            "abcds","sfdfcd","fcdfsdvsdv","Hello2","abcds","Hello","abcds","sfdfcd","fcdfsdvsdv","Hello2","abcds")*/
         var mRecyclerView: RecyclerView= findViewById(R.id.songList);
 
-        mRecyclerView.adapter = MyAdapter(songs)
+        val songsobjects = mutableListOf<Song>()
+        songsobjects.add(Song("abcd","regvfrtfgtrfbrtfb"))
+        songsobjects.add(Song("abcd1","regvfrtfgtrfbrtfb"))
+        songsobjects.add(Song("abcd2","regvfrtfgtrfbrtfb"))
+        songsobjects.add(Song("abcd3","regvfrtfgtrfbrtfb"))
+        songsobjects.add(Song("abcd4","regvfrtfgtrfbrtfb"))
+        songsobjects.add(Song("abcd5","regvfrtfgtrfbrtfb"))
+        songsobjects.add(Song("abcd6","regvfrtfgtrfbrtfb"))
+        songsobjects.add(Song("abcd7","regvfrtfgtrfbrtfb"))
+        songsobjects.add(Song("abcd8","regvfrtfgtrfbrtfb"))
+        songsobjects.add(Song("abcd","regvfrtfgtrfbrtfb"))
+        songsobjects.add(Song("abcd1","regvfrtfgtrfbrtfb"))
+        songsobjects.add(Song("abcd2","regvfrtfgtrfbrtfb"))
+        songsobjects.add(Song("abcd3","regvfrtfgtrfbrtfb"))
+        songsobjects.add(Song("abcd4","regvfrtfgtrfbrtfb"))
+        songsobjects.add(Song("abcd5","regvfrtfgtrfbrtfb"))
+        songsobjects.add(Song("abcd6","regvfrtfgtrfbrtfb"))
+        songsobjects.add(Song("abcd7","regvfrtfgtrfbrtfb"))
+        songsobjects.add(Song("abcd8","regvfrtfgtrfbrtfb"))
+
+
+
+        mRecyclerView.adapter = MyAdapter(songsobjects)
         mRecyclerView.layoutManager = LinearLayoutManager(this)
 
 
